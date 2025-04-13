@@ -11,15 +11,14 @@
     <header>
         <nav>
             <div class="logo" data-translate="title">REAL WAR3</div>
-            <ul>
-                <li><a href="#home" data-translate="home">Главная</a></li>
-                <li><a href="#gallery" data-translate="gallery">Галерея</a></li>
-                <li><a href="#installation" data-translate="installation">Установка</a></li>
-                <li><a href="#errors" data-translate="errors">Ошибки</a></li>
-                <li><a href="#server" data-translate="server">Сервер</a></li>
-                <li><a href="#faq" data-translate="faq">FAQ</a></li>
-                <li><a href="#changelog" data-translate="changelog">История изменений</a></li>
-            </ul>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item" data-translate="home">Главная</a>
+                <a href="#" class="nav-item" data-translate="gallery">Галерея</a>
+                <a href="#" class="nav-item" data-translate="installation">Установка</a>
+                <a href="#" class="nav-item" data-translate="errors">Ошибки</a>
+                <a href="#" class="nav-item" data-translate="server">Сервер</a>
+                <a href="#" class="nav-item" data-translate="changelog">История изменений</a>
+            </nav>
             <div class="language-switcher">
                 <button class="lang-btn active" data-lang="ru">RU</button>
                 <button class="lang-btn" data-lang="en">EN</button>
@@ -30,7 +29,7 @@
     <main>
         <section id="home" class="hero">
             <video autoplay muted loop playsinline id="hero-video">
-                <source src="https://donatebf2.online/giarabub.mp4" type="video/mp4">
+                <source src="http://104.233.211.166/playbf/giarabub.mp4" type="video/mp4">
             </video>
             <div class="hero-content">
                 <h1 data-translate="title">REAL WAR 3</h1>
@@ -193,24 +192,26 @@
         </section>
 
         <section id="support" class="support">
-            <h2 data-translate="support">Поддержка</h2>
+            <h2 data-translate="support">Support</h2>
             <div class="support-content">
-                <div class="contact-info">
-                    <h3 data-translate="contact">Контакты</h3>
-                    <div class="social-links">
-                        <a href="#" class="social-link discord">
+                <div class="support-item">
+                    <h3 data-translate="contact">Contact</h3>
+                    <div class="contact-buttons">
+                        <a href="https://discord.gg/fju8Tr4Yuz" target="_blank" class="contact-btn">
                             <i class="fab fa-discord"></i>
-                            <span>Discord</span>
+                            Discord
                         </a>
-                        <a href="#" class="social-link telegram">
+                        <a href="https://t.me/+W4z_V-fPr-1lNTQy" target="_blank" class="contact-btn">
                             <i class="fab fa-telegram"></i>
-                            <span>Telegram</span>
+                            Telegram
                         </a>
                     </div>
                 </div>
-                <div class="donate">
-                    <h3 data-translate="donate">Поддержать проект</h3>
-                    <button class="donate-btn">Donate</button>
+                <div class="support-item">
+                    <h3 data-translate="supportProject">Support the project</h3>
+                    <a href="https://donatebf2.online" target="_blank" class="donation-link" data-translate="donate">
+                        Donate
+                    </a>
                 </div>
             </div>
         </section>
