@@ -73,7 +73,12 @@ const translations = {
         desktopKick: 'Выкидывает на рабочий стол при подключении к серверу',
         desktopKickText: 'Проверьте лаунчером обновления, измените ключ вашей BF2. Важно! Всегда запускайте лаунчер от имени администратора!',
         oldWindows: 'Не хочет запускаться на Windows 7 или старше',
-        oldWindowsText: 'На данный момент есть нюанс со старыми версиями Windows, но есть фикс который это решает. Просим обращаться в Discord или Телеграм чат для консультации!'
+        oldWindowsText: 'На данный момент есть нюанс со старыми версиями Windows, но есть фикс который это решает. Просим обращаться в Discord или Телеграм чат для консультации!',
+        systemRequirements: 'Системные требования',
+        reqBf2: 'Battlefield 2 (v1.5)',
+        reqWindows: 'Windows 7/8/10/11',
+        reqRam: '2GB RAM',
+        reqSpace: '8GB свободного места'
     },
     en: {
         home: 'Home',
@@ -158,6 +163,11 @@ const translations = {
         desktopKick: 'Game crashes to desktop when connecting to server',
         desktopKickText: 'Check for updates using the launcher and change your BF2 key. Important! Always run the launcher as administrator!',
         oldWindows: 'Won\'t start on Windows 7 or older',
-        oldWindowsText: 'Currently there is an issue with older Windows versions, but we have a fix for this. Please contact us via Discord or Telegram chat for assistance!'
+        oldWindowsText: 'Currently there is an issue with older Windows versions, but we have a fix for this. Please contact us via Discord or Telegram chat for assistance!',
+        systemRequirements: 'System Requirements',
+        reqBf2: 'Battlefield 2 (v1.5)',
+        reqWindows: 'Windows 7/8/10/11',
+        reqRam: '2GB RAM',
+        reqSpace: '8GB free disk space'
     }
 }; 
