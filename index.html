@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="title">REAL WAR 3 - Battlefield 2 Mod</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo" data-translate="title">REAL WAR3</div>
+            <ul>
+                <li><a href="#home" data-translate="home">Главная</a></li>
+                <li><a href="#gallery" data-translate="gallery">Галерея</a></li>
+                <li><a href="#installation" data-translate="installation">Установка</a></li>
+                <li><a href="#errors" data-translate="errors">Ошибки</a></li>
+                <li><a href="#server" data-translate="server">Сервер</a></li>
+                <li><a href="#faq" data-translate="faq">FAQ</a></li>
+                <li><a href="#changelog" data-translate="changelog">История изменений</a></li>
+            </ul>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <video autoplay muted loop playsinline id="hero-video">
+                <source src="http://104.233.211.166/playbf/giarabub.mp4" type="video/mp4">
+            </video>
+            <div class="hero-content">
+                <h1 data-translate="title">REAL WAR 3</h1>
+                <p data-translate="subtitle">Официальный сайт модификации для Battlefield 2</p>
+                <div class="hero-buttons">
+                    <button class="download-btn" id="downloadBtn" data-translate="download">Скачать</button>
+                    <div id="downloadModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn">&times;</span>
+                            <h2 data-translate="download">Скачать</h2>
+                            <div class="download-options">
+                                <a href="#" class="download-option" id="launcherBtn">
+                                    <i class="fas fa-download"></i>
+                                    <div class="download-info">
+                                        <span class="download-title" data-translate="launcherTitle">Лаунчер</span>
+                                        <span class="download-size" data-translate="launcherSize">~240 MB</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="download-option" id="fullVersionBtn">
+                                    <i class="fas fa-download"></i>
+                                    <div class="download-info">
+                                        <span class="download-title" data-translate="fullTitle">Полная версия</span>
+                                        <span class="download-size" data-translate="fullSize">~7.4 GB</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Модальне вікно для лаунчера -->
+                    <div id="launcherModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn">&times;</span>
+                            <h2 data-translate="launcherInstructions">Установка лаунчера</h2>
+                            <div class="instruction-content">
+                                <p data-translate="launcherWarningText">Важно! Лаунчер необходимо:</p>
+                                <ol>
+                                    <li data-translate="launcherStep1">Поместить в папку с игрой Battlefield 2</li>
+                                    <li data-translate="launcherStep2">Запускать от имени администратора</li>
+                                </ol>
+                                <button class="confirm-btn" id="confirmLauncherBtn" data-translate="confirmRead">Я прочитал(а)</button>
+                                <button class="proceed-download-btn" id="proceedLauncherBtn" data-translate="proceedDownload" style="display: none;">Продолжить загрузку</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Модальне вікно для повної версії -->
+                    <div id="fullVersionModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close-btn">&times;</span>
+                            <h2 data-translate="fullVersionInstructions">Установка полной версии</h2>
+                            <div class="instruction-content">
+                                <img src="media/install.jpg" alt="Setup files" class="setup-preview">
+                                <p data-translate="fullVersionWarningText">Важно! Вам необходимо:</p>
+                                <ol>
+                                    <li data-translate="fullVersionStep1">Скачать все файлы, показанные на изображении</li>
+                                    <li data-translate="fullVersionStep2">Поместить их в любую папку</li>
+                                    <li data-translate="fullVersionStep3">Запустить Setup.exe</li>
+                                    <li data-translate="fullVersionStep4">Выбрать правильную директорию игры Battlefield 2</li>
+                                </ol>
+                                <button class="confirm-btn" id="confirmFullVersionBtn" data-translate="confirmRead">Я прочитал(а)</button>
+                                <button class="proceed-download-btn" id="proceedFullVersionBtn" data-translate="proceedDownload" style="display: none;">Продолжить загрузку</button>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="version">v3.1.1</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <h2 data-translate="gallery">Галерея</h2>
+            <div class="gallery-container">
+                <!-- Зображення будуть додані через JavaScript -->
+            </div>
+        </section>
+
+        <section id="installation" class="installation">
+            <h2 data-translate="installation">Установка</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3 data-translate="step1">Шаг 1</h3>
+                    <p data-translate="step1Text">Скачайте мод с официального сайта</p>
+                </div>
+                <div class="step">
+                    <h3 data-translate="step2">Шаг 2</h3>
+                    <p data-translate="step2Text">Установите мод в папку с игрой</p>
+                </div>
+                <div class="step">
+                    <h3 data-translate="step3">Шаг 3</h3>
+                    <p data-translate="step3Text">Запустите игру через новый ярлык</p>
+                </div>
+            </div>
+            <div class="requirements">
+                <h3 data-translate="requirements">Системные требования</h3>
+                <ul>
+                    <li>Battlefield 2 (v1.5)</li>
+                    <li>Windows 7/8/10/11</li>
+                    <li>2GB RAM</li>
+                    <li>2GB свободного места</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="errors" class="errors">
+            <h2 data-translate="commonErrors">Частые ошибки</h2>
+            <div class="error-list">
+                <div class="error-item">
+                    <div class="error-header">
+                        <h3 data-translate="emptyServer">Я зашел на ваш сервер, но никого нет</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="error-content">
+                        <p data-translate="emptyServerText">Сейчас мы играем в определенные дни, следите за нашими графиками. Но если игроков будет достаточно, то игра будет постоянно! Заметим, что сервер работает всегда!</p>
+                    </div>
+                </div>
+                <div class="error-item">
+                    <div class="error-header">
+                        <h3 data-translate="blackScreen">Не запускается Real War 3/черный экран, но ванильная игра работает</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="error-content">
+                        <p data-translate="blackScreenText">В первую очередь проверьте обновления лаунчером, если вы установили полную версию, у вас появится ярлык REAL WAR 3 (Launcher), перед каждым входом в игру желательно запускать его. Если не помогло обновление, обращайтесь в Discord или в наш Телеграм чат для консультации.</p>
+                    </div>
+                </div>
+                <div class="error-item">
+                    <div class="error-header">
+                        <h3 data-translate="desktopKick">Выкидывает на рабочий стол при подключении к серверу</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="error-content">
+                        <p data-translate="desktopKickText">Проверьте лаунчером обновления, измените ключ вашей BF2. Важно! Всегда запускайте лаунчер от имени администратора!</p>
+                    </div>
+                </div>
+                <div class="error-item">
+                    <div class="error-header">
+                        <h3 data-translate="oldWindows">Не хочет запускаться на Windows 7 или старше</h3>
+                        <span class="expand-icon">+</span>
+                    </div>
+                    <div class="error-content">
+                        <p data-translate="oldWindowsText">На данный момент есть нюанс со старыми версиями Windows, но есть фикс который это решает. Просим обращаться в Discord или Телеграм чат для консультации!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="server" class="server">
+            <h2 data-translate="serverStatus">Статус сервера</h2>
+            <div class="server-status">
+                <div class="server-info">
+                    <p class="server-address">IP: 37.230.210.130:20567</p>
+                    <div class="status-indicator">
+                        <span class="status-dot"></span>
+                        <span class="status-text" data-translate="checking">Проверка...</span>
+                    </div>
+                    <p><span data-translate="playersOnline">Игроков онлайн</span>: <span id="players-online">0/0</span></p>
+                    <p><span data-translate="currentMap">Текущая карта</span>: <span id="current-map">-</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="support" class="support">
+            <h2 data-translate="support">Поддержка</h2>
+            <div class="support-content">
+                <div class="contact-info">
+                    <h3 data-translate="contact">Контакты</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link discord">
+                            <i class="fab fa-discord"></i>
+                            <span>Discord</span>
+                        </a>
+                        <a href="#" class="social-link telegram">
+                            <i class="fab fa-telegram"></i>
+                            <span>Telegram</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="donate">
+                    <h3 data-translate="donate">Поддержать проект</h3>
+                    <button class="donate-btn">Donate</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="changelog" class="changelog">
+            <h2 data-translate="changelog">История изменений</h2>
+            <div class="changelog-container">
+                <div class="version-block">
+                    <h3 data-translate="v3.1.1 - 08.04.2025">v3.1.1 - 08.04.2025</h3>
+                    <ul>
+                        <li data-translate="Добавлены HD текстуры">Добавлены HD текстуры</li>
+                        <li data-translate="Исправлен баг со звуком вертолета на карте Операция Кобра">Исправлен баг со звуком вертолета на карте Операция Кобра</li>
+                        <li data-translate="Уменьшен точность HK 416">Уменьшен точность HK 416</li>
+                        <li data-translate="Исправлен вылет игры в одиночной игре">Исправлен вылет игры в одиночной игре</li>
+                        <li data-translate="Добавлены карты Alcazar и Battle of Divided">Добавлены карты Alcazar и Battle of Divided</li>
+                    </ul>
+                </div>
+                <div class="version-block">
+                    <h3 data-translate="v3.1 - 26.03.2025">v3.1 - 26.03.2025</h3>
+                    <ul>
+                        <li data-translate="Улучшен баланс оружия">Улучшен баланс оружия</li>
+                        <li data-translate="Теперь APC Bradley может вмещать 3-х пассажиров">Теперь APC Bradley может вмещать 3-х пассажиров</li>
+                        <li data-translate="Исправлена проблема отображения точек на некоторых картах">Исправлена проблема отображения точек на некоторых картах</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p data-translate="copyright">&copy; 2024 REAL WAR 3. Все права защищены.</p>
+        <div class="moddb-widget">
+            <a href="https://www.moddb.com/mods/real-war-31" title="View Real War 3.1 on ModDB" target="_blank">
+                <img src="https://button.moddb.com/popularity/medium/mods/66044.png" alt="Real War 3.1">
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
