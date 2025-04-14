@@ -29,15 +29,15 @@ function changeLanguage(lang) {
 // Галерея зображень
 const galleryImages = [
     {
-        src: './media/screen186.jpg',
+        src: '/home/media/screen186.jpg',
         altKey: 'screenshot1'
     },
     {
-        src: './media/screen092.jpg',
+        src: '/home/media/screen092.jpg',
         altKey: 'screenshot2'
     },
     {
-        src: './media/screen127.jpg',
+        src: '/home/media/screen127.jpg',
         altKey: 'screenshot3'
     }
 ];
@@ -120,11 +120,11 @@ document.querySelectorAll('nav a').forEach(anchor => {
 function handleDownload(type) {
     const downloads = {
         launcher: {
-            url: 'downloads/RW3_Launcher.exe',
+            url: '/home/downloads/RW3_Launcher.exe',
             name: 'RW3_Launcher.exe'
         },
         full: {
-            url: 'downloads/RW3_Full.zip',
+            url: '/home/downloads/RW3_Full.zip',
             name: 'RW3_Full.zip'
         }
     };
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
         galleryItem.className = 'gallery-item';
         
         const img = document.createElement('img');
-        img.src = `media/${screenshot}`;
+        img.src = `/home/media/${screenshot}`;
         img.alt = 'Real War 3 Screenshot';
         img.loading = 'lazy';
         
