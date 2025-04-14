@@ -29,15 +29,15 @@ function changeLanguage(lang) {
 // Галерея зображень
 const galleryImages = [
     {
-        src: 'images/gallery/image1.jpg',
+        src: './media/screen186.jpg',
         altKey: 'screenshot1'
     },
     {
-        src: 'images/gallery/image2.jpg',
+        src: './media/screen092.jpg',
         altKey: 'screenshot2'
     },
     {
-        src: 'images/gallery/image3.jpg',
+        src: './media/screen127.jpg',
         altKey: 'screenshot3'
     }
 ];
