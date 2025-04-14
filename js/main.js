@@ -102,15 +102,25 @@ async function checkServerStatus() {
 }
 
 // Плавна прокрутка для навігації
-document.querySelectorAll('nav a').forEach(anchor => {
+document.querySelectorAll('.nav-menu a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
         
         const targetId = this.getAttribute('href');
+        if (!targetId || targetId === '#') return;
+        
         const targetSection = document.querySelector(targetId);
+        if (!targetSection) {
+            console.warn(`Section ${targetId} not found`);
+            return;
+        }
+        
+        const headerOffset = 80;
+        const elementPosition = targetSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
         
         window.scrollTo({
-            top: targetSection.offsetTop - 80,
+            top: offsetPosition,
             behavior: 'smooth'
         });
     });
