@@ -27,7 +27,7 @@ const translations = {
         connectionError: 'Ошибка подключения',
         playersOnline: 'Игроков онлайн',
         ping: 'Пинг',
-        copyright: '© 2024 REAL WAR 3. Все права защищены.',
+        copyright: '© 2025 REAL WAR 3. Все права защищены.',
         download: 'Скачать',
         version: 'Версия',
         requirements: 'Системные требования',
@@ -170,4 +170,5 @@ const translations = {
         reqRam: '2GB RAM',
         reqSpace: '8GB free disk space'
     }
+
 }; 
