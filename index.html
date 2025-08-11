@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-translate="title">REAL WAR 3 - Battlefield 2 Mod</title>
-    <link rel="stylesheet" href="/home/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -95,7 +95,7 @@
                             </div>
                         </div>
                     </div>
-                    <span class="version">v3.1.2</span>
+                    <span class="version">v3.1.4</span>
                 </div>
             </div>
         </section>
@@ -179,14 +179,72 @@
         <section id="server" class="server">
             <h2 data-translate="serverStatus">Статус сервера</h2>
             <div class="server-status">
-                <div class="server-info">
-                    <p class="server-address">IP: 37.230.210.130:17568</p>
-                    <div class="status-indicator">
-                        <span class="status-dot"></span>
-                        <span class="status-text" data-translate="checking">Проверка...</span>
+                <div class="server-card">
+                    <div class="server-header">
+                        <div class="server-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="server-title">
+                            <h3>REAL WAR 3 Server</h3>
+                            <p class="server-address">37.230.210.130:20567</p>
+                        </div>
                     </div>
-                    <p><span data-translate="playersOnline">Игроков онлайн</span>: <span id="players-online">0/0</span></p>
-                    <p><span data-translate="currentMap">Текущая карта</span>: <span id="current-map">-</span></p>
+                    
+                    <div class="server-stats">
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-signal"></i>
+                            </div>
+                            <div class="stat-content">
+                                <span class="stat-label" data-translate="status">Статус</span>
+                                <div class="status-indicator">
+                                    <span class="status-dot"></span>
+                                    <span class="status-text" data-translate="checking">Проверка...</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-content">
+                                <span class="stat-label" data-translate="playersOnline">Игроков онлайн</span>
+                                <span class="stat-value" id="players-online">0/0</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-map"></i>
+                            </div>
+                            <div class="stat-content">
+                                <span class="stat-label" data-translate="currentMap">Текущая карта</span>
+                                <span class="stat-value" id="current-map">-</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="stat-content">
+                                <span class="stat-label" data-translate="uptime">Время работы</span>
+                                <span class="stat-value" id="server-uptime">24/7</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="server-actions">
+                        <button class="connect-btn" id="connectBtn">
+                            <i class="fas fa-play"></i>
+                            <span data-translate="connect">Подключиться</span>
+                        </button>
+                        <button class="refresh-btn" id="refreshBtn">
+                            <i class="fas fa-sync-alt"></i>
+                            <span data-translate="refresh">Обновить</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -219,6 +277,17 @@
         <section id="changelog" class="changelog">
             <h2 data-translate="changelog">История изменений</h2>
             <div class="changelog-container">
+                <div class="version-block">
+                    <h3 data-translate="v3.1.4 - 09.08.2025">v3.1.4 - 09.08.2025</h3>
+                    <ul>
+                        <li data-translate="Новые фракции - Япония и Израиль">Новые фракции - Япония и Израиль</li>
+                        <li data-translate="Уникальное оружие и техника для новых фракций">Уникальное оружие и техника для новых фракций</li>
+                        <li data-translate="Все страны Евросоюза объединены в единую фракцию EU">Все страны Евросоюза объединены в единую фракцию EU</li>
+                        <li data-translate="Добавлено 2 новые карты">Добавлено 2 новые карты</li>
+                        <li data-translate="Для класса Спецназ: метательные ножи">Для класса Спецназ: метательные ножи</li>
+                        <li data-translate="Для класса Снайпер: боевой арбалет">Для класса Снайпер: боевой арбалет</li>
+                    </ul>
+                </div>
                 <div class="version-block">
                     <h3 data-translate="v3.1.1 - 08.04.2025">v3.1.1 - 08.04.2025</h3>
                     <ul>
@@ -255,7 +324,7 @@
         </div>
     </footer>
 
-    <script src="/home/js/translations.js"></script>
-    <script src="/home/js/main.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html> 

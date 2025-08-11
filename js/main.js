@@ -26,21 +26,7 @@ function changeLanguage(lang) {
     localStorage.setItem('language', lang);
 }
 
-// Галерея зображень
-const galleryImages = [
-    {
-        src: '/home/media/screen186.jpg',
-        altKey: 'screenshot1'
-    },
-    {
-        src: '/home/media/screen092.jpg',
-        altKey: 'screenshot2'
-    },
-    {
-        src: '/home/media/screen127.jpg',
-        altKey: 'screenshot3'
-    }
-];
+// Галерея зображень - використовуємо всі доступні скріншоти
 
 function initGallery() {
     const galleryContainer = document.querySelector('.gallery-container');
@@ -49,14 +35,40 @@ function initGallery() {
     // Очищаємо контейнер
     galleryContainer.innerHTML = '';
     
+    // Використовуємо всі доступні скріншоти
+    const screenshots = [
+        'screen186.jpg', 'screen092.jpg', 'screen127.jpg', 'screen041.jpg',
+        'screen040.jpg', 'screen184.jpg', 'screen164.jpg', 'screen012.jpg',
+        'screen024.jpg', 'screen026.jpg', 'screen032.jpg', 'screen079.jpg',
+        'screen113.jpg', 'screen142.jpg', 'screen042.jpg', 'screen054.jpg'
+    ];
+    
     // Додаємо зображення
-    galleryImages.forEach(image => {
+    screenshots.forEach(screenshot => {
         const galleryItem = document.createElement('div');
         galleryItem.className = 'gallery-item';
         
         const img = document.createElement('img');
-        img.src = image.src;
-        img.alt = translations[currentLanguage][image.altKey] || 'Screenshot';
+        img.src = `media/${screenshot}`;
+        img.alt = 'Real War 3 Screenshot';
+        img.loading = 'lazy';
+        
+        // Додаємо обробник для повноекранного перегляду
+        galleryItem.addEventListener('click', () => {
+            const fullscreenContainer = document.createElement('div');
+            fullscreenContainer.className = 'fullscreen-gallery';
+            
+            const fullImg = document.createElement('img');
+            fullImg.src = img.src;
+            fullImg.alt = img.alt;
+            
+            fullscreenContainer.appendChild(fullImg);
+            document.body.appendChild(fullscreenContainer);
+            
+            fullscreenContainer.addEventListener('click', () => {
+                fullscreenContainer.remove();
+            });
+        });
         
         galleryItem.appendChild(img);
         galleryContainer.appendChild(galleryItem);
@@ -74,7 +86,7 @@ async function checkServerStatus() {
     if (!statusDot || !statusText || !playersOnline) return;
 
     try {
-        const response = await fetch('https://api.bflist.io/bf2/v1/servers/37.230.210.130:17568');
+        const response = await fetch('https://api.bflist.io/bf2/v1/servers/37.230.210.130:20567');
         const data = await response.json();
         
         // Сервер вважається онлайн, якщо отримали відповідь
@@ -177,6 +189,29 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Оновлення статусу сервера кожні 5 хвилин
     setInterval(checkServerStatus, 300000);
+    
+    // Додаємо обробники для кнопок сервера
+    const connectBtn = document.getElementById('connectBtn');
+    const refreshBtn = document.getElementById('refreshBtn');
+    
+    if (connectBtn) {
+        connectBtn.addEventListener('click', () => {
+            // Відкриваємо посилання на сервер у новій вкладці
+            window.open('steam://connect/37.230.210.130:20567', '_blank');
+        });
+    }
+    
+    if (refreshBtn) {
+        refreshBtn.addEventListener('click', () => {
+            // Оновлюємо статус сервера
+            checkServerStatus();
+            // Додаємо анімацію обертання
+            refreshBtn.querySelector('i').style.transform = 'rotate(360deg)';
+            setTimeout(() => {
+                refreshBtn.querySelector('i').style.transform = 'rotate(0deg)';
+            }, 1000);
+        });
+    }
 
     // Додаємо обробники для кнопок завантаження
     document.querySelectorAll('.download-option').forEach(option => {
@@ -187,49 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Оновлена реалізація галереї
-    const galleryContainer = document.querySelector('.gallery-container');
-    if (!galleryContainer) return;
-
-    const screenshots = [
-        'screen186.jpg', 'screen092.jpg', 'screen127.jpg', 'screen041.jpg',
-        'screen040.jpg', 'screen184.jpg', 'screen164.jpg', 'screen012.jpg',
-        'screen024.jpg', 'screen026.jpg', 'screen032.jpg', 'screen079.jpg',
-        'screen113.jpg', 'screen142.jpg', 'screen042.jpg', 'screen054.jpg'
-    ];
-
-    // Очищаємо контейнер
-    galleryContainer.innerHTML = '';
-
-    screenshots.forEach(screenshot => {
-        const galleryItem = document.createElement('div');
-        galleryItem.className = 'gallery-item';
-        
-        const img = document.createElement('img');
-        img.src = `/home/media/${screenshot}`;
-        img.alt = 'Real War 3 Screenshot';
-        img.loading = 'lazy';
-        
-        galleryItem.appendChild(img);
-        galleryContainer.appendChild(galleryItem);
-        
-        // Додаємо обробник для повноекранного перегляду
-        galleryItem.addEventListener('click', () => {
-            const fullscreenContainer = document.createElement('div');
-            fullscreenContainer.className = 'fullscreen-gallery';
-            
-            const fullImg = document.createElement('img');
-            fullImg.src = img.src;
-            fullImg.alt = img.alt;
-            
-            fullscreenContainer.appendChild(fullImg);
-            document.body.appendChild(fullscreenContainer);
-            
-            fullscreenContainer.addEventListener('click', () => {
-                fullscreenContainer.remove();
-            });
-        });
-    });
+         // Галерея вже ініціалізована в initGallery()
 
     // Add click handlers for error items
     document.querySelectorAll('.error-item').forEach(item => {
@@ -258,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const confirmFullVersionBtn = document.getElementById('confirmFullVersionBtn');
 
     // URLs for downloads (Google Drive links)
-    const launcherUrl = 'https://mega.nz/file/hu1zlIaD#ApsDytajSQid9AR2TwoySgTYhwQFtAPn1AmdfSn2ELU';
+    const launcherUrl = 'https://drive.google.com/file/d/1Is2Sn74fjr50ybb0ieoX8P9yIpE1LWLC/view?usp=sharing';
     const fullVersionUrl = 'https://drive.google.com/drive/folders/1VQrQQyfAvUEyaseRcxL0cC56gc3i0Wuf?usp=sharing';
 
     // Close buttons
