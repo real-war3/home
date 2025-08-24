@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const confirmFullVersionBtn = document.getElementById('confirmFullVersionBtn');
 
     // URLs for downloads (Google Drive links)
-    const launcherUrl = 'https://drive.google.com/file/d/1Is2Sn74fjr50ybb0ieoX8P9yIpE1LWLC/view?usp=sharing';
+    const launcherUrl = 'https://mega.nz/file/hu1zlIaD';
     const fullVersionUrl = 'https://drive.google.com/drive/folders/1VQrQQyfAvUEyaseRcxL0cC56gc3i0Wuf?usp=sharing';
 
     // Close buttons
@@ -323,4 +323,5 @@ document.addEventListener('DOMContentLoaded', () => {
             e.stopPropagation();
         });
     });
+
 }); 
