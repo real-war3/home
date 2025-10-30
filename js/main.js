@@ -86,7 +86,7 @@ async function checkServerStatus() {
     if (!statusDot || !statusText || !playersOnline) return;
 
     try {
-        const response = await fetch('https://api.bflist.io/bf2/v1/servers/37.230.210.130:20567');
+        const response = await fetch('https://api.bflist.io/bf2/v1/servers/37.230.210.130:17568');
         const data = await response.json();
         
         // Сервер вважається онлайн, якщо отримали відповідь
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (connectBtn) {
         connectBtn.addEventListener('click', () => {
             // Відкриваємо посилання на сервер у новій вкладці
-            window.open('steam://connect/37.230.210.130:20567', '_blank');
+            window.open('steam://connect/37.230.210.130:17568', '_blank');
         });
     }
     
@@ -325,6 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 }); 
+
 
 
 
